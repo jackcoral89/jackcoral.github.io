@@ -1,0 +1,147 @@
+// Color
+$light: #fff;
+$dark: rgb(17, 17, 17);
+$base: #58a6ff;
+$angular: #c3002f;
+$github: #8b949e;
+$linkedin: #0a66c2;
+$hashnode: #2a62ff;
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap");
+
+// Font
+$second-font: "IBM Plex Mono", monospace;
+$main-font: "Kanit", sans-serif;
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+
+$h1: 3rem;
+$p: 0.8rem;
+
+.bold {
+  font-weight: 600;
+}
+
+.dark-mode-on {
+  h1,
+  p,
+  a {
+    color: $light;
+  }
+}
+
+h1 {
+  font-family: $main-font;
+  margin: 0;
+  font-size: $h1;
+  line-height: 50px;
+  margin-bottom: 10px;
+  @media (max-width: $sm) {
+    font-size: 2.2rem !important;
+  }
+}
+
+p,
+a {
+  font-family: $second-font;
+  margin: 0;
+  font-size: $p;
+}
+
+a {
+  color: $dark;
+  &.base {
+    &:hover {
+      color: $base;
+    }
+  }
+  &.angular {
+    &:hover {
+      color: $angular;
+    }
+  }
+  &.github {
+    &:hover {
+      color: $github;
+    }
+  }
+  &.hashnode {
+    &:hover {
+      color: $hashnode;
+    }
+  }
+  &.linkedin {
+    &:hover {
+      color: $linkedin;
+    }
+  }
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.main {
+  &.dark-mode-on {
+    background-color: $dark;
+  }
+  .head-content-info {
+    display: flex;
+    @media (max-width: $md) {
+      display: unset !important;
+      .waving_hand,
+      .smiling_face_with_sunglasses {
+        height: 40px;
+        width: 40px;
+        margin: 4px 6px;
+      }
+    }
+  }
+  .hi-there,
+  .im-giacomo {
+    display: flex;
+  }
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 4rem;
+  @media (max-width: $sm) {
+    padding: 0 1rem;
+    #mobile-break {
+      display: block;
+    }
+  }
+  .social {
+    padding: 1rem 0;
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .toggle-dark-mode {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+		.toggle {
+			font-size: 1.6rem;
+			border: 0;
+			background: none;
+			cursor: pointer;
+			outline: none;
+		}
+  }
+}
+
+::selection {
+  background: #00ff0d;
+}
+
+::-moz-selection {
+  background: #00ff0d;
+}
