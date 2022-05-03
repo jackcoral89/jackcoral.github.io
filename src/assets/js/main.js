@@ -9,3 +9,11 @@ toggle.addEventListener('click', () => {
 		toggle.innerHTML = "🌖";
 	}
 });
+
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (systemTheme) {
+	mainCtr.classList.add('dark-mode-on')
+} else {
+	mainCtr.classList.remove('dark-mode-on')
+}
