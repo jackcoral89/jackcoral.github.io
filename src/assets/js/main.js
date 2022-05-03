@@ -12,6 +12,8 @@ toggle.addEventListener('click', () => {
 
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+console.log(systemTheme);
+
 if (systemTheme) {
 	mainCtr.classList.add('dark-mode-on')
 } else {
